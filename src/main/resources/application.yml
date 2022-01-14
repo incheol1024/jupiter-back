@@ -1,0 +1,34 @@
+jasypt:
+  encryptor:
+    bean: encryptorBean
+config:
+  encrypt:
+    password: aOklgAckuZ6mGVu5rl+D47xA2M1fCdRY
+    algorithm: PBEWithMD5AndDES
+    provider-name: SunJCE
+    pool-size: 1
+    key-obtention-iterations: 1000
+    string-output-type: base64
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://cantata-db.ciqt8ofb3svf.ap-northeast-2.rds.amazonaws.com:3306/jupiter
+    username: devuser
+    password: ENC(XbZeMIJiKO2E3dleR2cFlQ==)
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        # System.out 통해 로그 기록, 운영 시 사용 X
+#        show_sql: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+#        type: trace
