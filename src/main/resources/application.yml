@@ -32,3 +32,8 @@ logging:
       hibernate:
         SQL: debug
 #        type: trace
+
+
+
+kafka:
+  bootstrapAddress: localhost:8090
