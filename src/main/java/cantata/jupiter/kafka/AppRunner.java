@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class AppRunner implements ApplicationRunner {
 
-    @PutMessage
+    @PutMessage(body = "run")
     @Override
     public void run(ApplicationArguments args) throws Exception {
         log.info("============test============");
