@@ -7,5 +7,15 @@ import java.lang.annotation.*;
 @Documented
 public @interface PutMessage {
 
+    String host() default "http://loalhost";
+
+    String url() default "/default-log";
+
+    String body();
+
+    LogType logType() default LogType.DEFAULT_LOG;
+
+    String value() default "";
+
 
 }
